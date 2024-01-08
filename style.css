@@ -82,7 +82,7 @@ body {
   margin-top: 14%;
   border-radius: 10px;
   border-style: none;
-  background-color: rgb(70, 177, 177);
+  background-color: rgb(201, 255, 255);
   box-shadow: 0 2px 5px rgb(70, 177, 177);
   transition: all 0.2s ease-in-out;
 }
