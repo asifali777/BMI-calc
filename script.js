@@ -39,7 +39,7 @@ const height = givenHeight*givenHeight;
 var claculatedBMI = weightNum/height;
 ///////////////////////////////
 if (ageNUm == "" || weightNum == "" || heightNum == "") {
-  alert("Please enter appropreat details")
+  alert("Please enter appropriat details")
 } else{ 
   setTimeout(()=>{ 
  var element = document.getElementById("greet");
