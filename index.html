@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <!-- first interface -->
+  <div class="welcome">
+    <p>What's Your BMI?</p>
+  </div>
+ <div class="first">
+   <div class="nameInput">
+    <P>What is your Name?</P>
+    <input type="text" id="nameInput" value="" required> 
+   <div class="button1">
+    <button id="btn1" class="btn1" onclick="forButton1()"><P>Next <i class="fa-solid fa-arrow-right"></i></P></button>
+   </div>
+   </div>
+ </div> 
+<!-- second interface -->
+<div id="greet" class="greet hidden"><p id="displayName" class="hidden">Asif Ali</p>
+</div>
+<div id="second" class="second hidden">
+
+<div class="selection-container">
+  <div class="avater">
+
+    <div class="male-avater">
+    <img id="maleImage" src="./male avatar.png" alt="">
+    </div>
+    <div class="female-avater">
+     <img id="femaleImage" src="./female avater.png" alt=""> 
+   </div>
+
+  </div>
+  <div class="gender-selection">
+    <div class="button2-male">
+      <button id="male-button" class="male-button" onclick="maleSelection()" ><P>Male</P></button>
+      
+    </div>
+    <div class="button2-female">
+      <button id="female-button" class="female-button" onclick="femaleSelection()"  ><p>Female</p></button>
+      
+    </div>
+  </div>
+  </div>
+
+<form action="">
+  <div class="input-age">
+    <P>Age</P><input id="ageInput" type="number" value="" placeholder="Enter your Age here" required>
+  </div>
+  
+  <div class="input-weight">
+  <p>Weight</p> <input id="weightInput" type="number" placeholder="Enter your Weight here"><span>kg</span>
+  </div>
+  
+  <div class="input-height">
+    <p>Height</p> <input id="heightInput" type="number" value="" placeholder="Example 5.7" required><span>ft</span>
+  </div>
+  
+  <div class="button3">
+    <button  class="btn3" id="btn3" type="button"  onclick="forButton3()"><p>Calculate your BMI</p></button>
+  </div>
+</form>
+<!-- discription part...... -->
+<div class="introductionBMI">
+  <p class="introPara">Introduction to the body mass index(BMI)</p>
+  <p>Body Mass Index (BMI) is a numerical value derived from an individual's weight and height, commonly used as a simple and quick indicator of body fatness and overall health. It is a screening tool that helps assess whether a person has a healthy body weight relative to their height.<br></p>
+    <p class="introPara">How to calculate BMI</p>
+    <p>
+      I If you want to calculate your BMI, you have to find out your weight and height first. Once you know these values, you can arrive at the result by following the two steps mentioned below: <br>
+      <ol>
+        <li>Multiply your height by itself (height x height) in meters</li> <br>
+        <li>Divide your weight by the answer you get in the first steps</li>
+      </ol>
+     <strong>It's important to note</strong>
+       that BMI has limitations and does not directly measure body fat percentage or distribution. Athletes and individuals with high muscle mass may have higher BMIs without having excess body fat. Similarly, BMI may not accurately reflect health risks in older adults or those with certain medical conditions. <br> <br>
+      Despite its limitations, BMI remains a widely used and practical tool for population-level assessments of overweight and obesity, helping healthcare professionals and individuals gauge potential health risks associated with weight status. However, for a comprehensive evaluation of an individual's health, additional factors such as waist circumference, body composition, and overall lifestyle should also be considered.
+    </p>
+</div>
+<footer><p>By Asif Ali</p></footer>
+</div>
+<div id="result-section" class="result-section hidden">
+  <div class="score">
+    <p id="range-value" class="range-value">19.9</p>
+    <p class=" hidden status" id="status">You have a <strong>Normal</strong> body weight</p>
+    <p class=" hidden status1" id="status1">You are in <strong>Under</strong> weight category</p>
+    <p class=" hidden status2" id="status2">You are in <strong>Over</strong> weight category</p>
+  </div>
+<div class="highlight">
+  <div class="age_weight_height-highlight">
+    <p>Age</p>
+    <p id="age-number" class="age-number">22</p>
+  </div>
+  <div class="bar"></div>
+  <div class="age_weight_height-highlight">
+    <p>Weight</p>
+    <p id="weight-number" class="weight-number">57 kg</p>
+  </div>
+  <div class="bar"></div>
+  <div class="age_weight_height-highlight">
+    <p>Height</p>
+    <p id="height-number" class="height-number">5.7 ft</p>
+  </div>
+</div>
+<div class="tips_for_Underweight hidden" id="tips1">
+  <p class="introPara">Here are general suggestions for Underweight (BMI less than 18.5):</p>
+  <ol>
+    <li><strong>Consult a Healthcare Professional:</strong> If you are underweight, it's crucial to consult with a healthcare professional to rule out any underlying health conditions contributing to low weight.</li> 
+    <li><strong>Balanced Diet:</strong> Focus on nutrient-dense foods that provide essential vitamins, minerals, and calories. Include a mix of lean proteins, healthy fats, whole grains, and fruits and vegetables in your diet.</li>
+    <li><strong>Regular Meals and Snacks:</strong> Eat frequent, balanced meals and snacks to increase calorie intake throughout the day.</li>
+    <li><strong>Strength Training: </strong>Incorporate strength training exercises to build muscle mass. This can help improve overall body composition.</li>
+  </ol>
+
+</div>
+<div class="tips_for_Normal hidden" id="tips2">
+  <p class="introPara">Here are general suggestions for Normal Weight (BMI between 18.5 and 24.9):</p>
+  <ol>
+    <li><strong>Maintain a Balanced Diet:</strong> Continue to consume a balanced diet with a variety of nutrient-rich foods.</li> 
+    <li> <strong>Regular Physical Activity:</strong> Engage in regular physical activity to maintain overall health and well-being. Aim for at least 150 minutes of moderate-intensity aerobic exercise per week.</li>
+    <li> <strong>Monitor Portion Sizes:</strong> Be mindful of portion sizes to prevent unintentional weight gain. Pay attention to hunger and fullness cues.</li>
+  </ol>
+
+</div>
+<div class="tips_for_Overweight hidden" id="tips3">
+  <p class="introPara">Here are general suggestions for Overweight (BMI over 25):</p>
+  <ol>
+    <li> <strong>Healthy Eating Habits:</strong> Adopt healthy eating habits by reducing the intake of processed foods, sugary beverages, and high-calorie snacks. Focus on whole foods and include more fruits, vegetables, and lean proteins.</li> 
+    <li> <strong> Regular Exercise:</strong> Incorporate regular aerobic exercise, such as brisk walking, cycling, or swimming, along with strength training exercises. Aim for at least 150 minutes of moderate-intensity aerobic exercise per week.</li>
+    <li> <strong> Portion Control:</strong> Be mindful of portion sizes and avoid overeating. Use smaller plates and pay attention to hunger and fullness cues.</li>
+    <li> <strong>Consult a Healthcare Professional:</strong> If you are planning to make significant changes to your diet or exercise routine, it's advisable to consult with a healthcare professional or a registered dietitian for personalized guidance.</li>
+  </ol>
+
+</div>
+<footer><p>By <a href="https://github.com/asifali777">Asif Ali</a></p></footer>
+
+</div>
+
+
+<script src="script.js"></script>   
+</body>
+</html>
