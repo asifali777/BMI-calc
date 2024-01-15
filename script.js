@@ -42,8 +42,6 @@ if (ageNUm == "" || weightNum == "" || heightNum == "") {
   alert("Please enter appropriat details")
 } else{ 
   setTimeout(()=>{ 
- var element = document.getElementById("greet");
- element.classList.toggle("hidden");
  var element = document.getElementById("second");
  element.classList.toggle("hidden");
 // show third section 
